@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Leftover Recipe Finder</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-visual">
+    <i class="fa-solid fa-kitchen-set brand-icon"></i>
+    <h1>Leftover Recipe Finder</h1>
+    <p>Turn what's in your fridge into your next meal</p>
+    <i class="fa-solid fa-carrot floating-icon"></i>
+    <i class="fa-solid fa-egg floating-icon"></i>
+    <i class="fa-solid fa-pepper-hot floating-icon"></i>
+    <i class="fa-solid fa-bowl-food floating-icon"></i>
+  </div>
+
+  <div class="auth-form-side">
+    <div class="auth-form-box">
+      <h2>Welcome Back 👋</h2>
+      <p class="subtitle">Login to find recipes from what you have</p>
+
+      <div class="error-msg" id="errorMsg"></div>
+      <div class="success-msg" id="successMsg"></div>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="loginUsername" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <button type="submit" class="auth-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
