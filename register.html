@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Leftover Recipe Finder</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <div class="auth-visual">
+    <i class="fa-solid fa-kitchen-set brand-icon"></i>
+    <h1>Join Recipe Finder</h1>
+    <p>Create an account to start saving your favorite recipes</p>
+    <i class="fa-solid fa-carrot floating-icon"></i>
+    <i class="fa-solid fa-egg floating-icon"></i>
+    <i class="fa-solid fa-pepper-hot floating-icon"></i>
+    <i class="fa-solid fa-bowl-food floating-icon"></i>
+  </div>
+
+  <div class="auth-form-side">
+    <div class="auth-form-box">
+      <h2>Create Account ✨</h2>
+      <p class="subtitle">It only takes a minute</p>
+
+      <div class="error-msg" id="errorMsg"></div>
+      <div class="success-msg" id="successMsg"></div>
+
+      <form id="registerForm">
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="regUsername" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="regEmail" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="regPassword" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+        </div>
+        <button type="submit" class="auth-btn"><i class="fa-solid fa-user-plus"></i> Register</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
