@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - Recipe Finder</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+<nav class="admin-navbar">
+  <div class="logo"><i class="fa-solid fa-kitchen-set"></i> Recipe Finder <span>Admin</span></div>
+  <div class="admin-nav-actions"><a href="recipe.html"><i class="fa-solid fa-utensils"></i> User Page</a><button id="adminLogout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></div>
+</nav>
+
+<main class="admin-container">
+  <div class="admin-heading"><div><h1><i class="fa-solid fa-gauge-high"></i> Admin Dashboard</h1><p>Manage users, monitor activity and view the recipe database.</p></div></div>
+
+  <section class="stats-grid">
+    <div class="stat-card"><i class="fa-solid fa-users"></i><div><span>Total Users</span><strong id="totalUsers">0</strong></div></div>
+    <div class="stat-card"><i class="fa-solid fa-magnifying-glass"></i><div><span>Search Attempts</span><strong id="totalSearches">0</strong></div></div>
+    <div class="stat-card"><i class="fa-solid fa-heart"></i><div><span>Saved Recipes</span><strong id="totalFavorites">0</strong></div></div>
+    <div class="stat-card"><i class="fa-solid fa-book"></i><div><span>Total Recipes</span><strong id="totalRecipes">0</strong></div></div>
+  </section>
+
+  <section class="admin-panel">
+    <div class="panel-title"><h2><i class="fa-solid fa-user-gear"></i> User Management</h2><input id="userSearch" type="text" placeholder="Search users..."></div>
+    <div class="table-wrap"><table><thead><tr><th>#</th><th>Username</th><th>Email</th><th>Action</th></tr></thead><tbody id="usersTable"></tbody></table></div>
+    <p class="admin-note">Admin data is stored in the browser's localStorage for this project demo.</p>
+  </section>
+
+  <section class="admin-panel">
+    <div class="panel-title"><h2><i class="fa-solid fa-chart-line"></i> Recent Activity</h2><button class="small-btn" id="clearActivity"><i class="fa-solid fa-trash"></i> Clear Activity</button></div>
+    <div class="table-wrap"><table><thead><tr><th>User</th><th>Ingredients</th><th>Date & Time</th></tr></thead><tbody id="activityTable"></tbody></table></div>
+  </section>
+
+  <section class="admin-panel">
+    <div class="panel-title"><h2><i class="fa-solid fa-book-open"></i> Recipe Database</h2></div>
+    <div class="recipe-admin-grid" id="recipeAdminGrid"></div>
+  </section>
+</main>
+<script src="recipes-data.js"></script><script src="admin.js"></script>
+</body></html>
