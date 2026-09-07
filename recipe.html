@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Finder</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+
+<nav class="navbar">
+  <div class="logo"><i class="fa-solid fa-kitchen-set"></i> Recipe Finder</div>
+  <div class="user-area">
+    <span><i class="fa-solid fa-circle-user"></i> <span id="usernameLabel"></span></span>
+    <button class="logout-btn" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+  </div>
+</nav>
+
+<div class="container">
+  <header class="hero">
+    <h1>🍳 Leftover Recipe Finder</h1>
+    <p>Type what's in your fridge — get recipes you can actually make</p>
+    <p class="hint" style="margin-top:6px;"><i class="fa-solid fa-book-open"></i> 100 recipes in the database</p>
+  </header>
+
+  <div class="search-box">
+    <label for="ingredientInput"><i class="fa-solid fa-carrot"></i> What ingredients do you have?</label>
+    <div class="input-row">
+      <input type="text" id="ingredientInput" placeholder="e.g. tomato, onion, rice, egg">
+      <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Find Recipes</button>
+      <button id="surpriseBtn"><i class="fa-solid fa-dice"></i> Surprise Me</button>
+    </div>
+    <p class="hint">Separate ingredients with commas</p>
+
+    <!-- Colorful pill filter buttons (click to select, no plain radio buttons) -->
+    <div class="filter-row">
+      <button class="filter-btn active" data-diet="all"><i class="fa-solid fa-utensils"></i> All</button>
+      <button class="filter-btn" data-diet="veg"><i class="fa-solid fa-leaf"></i> Veg</button>
+      <button class="filter-btn" data-diet="nonveg"><i class="fa-solid fa-drumstick-bite"></i> Non-Veg</button>
+    </div>
+  </div>
+
+  <!-- Recipes render here as a colorful grid of clickable tiles -->
+  <div id="results" class="recipe-grid">
+    <div class="empty-msg">Enter your ingredients above and hit "Find Recipes" 👆</div>
+  </div>
+
+  <div class="fav-section" id="favSection" style="display:none;">
+    <h2><i class="fa-solid fa-star"></i> Your Saved Recipes</h2>
+    <div id="favResults" class="recipe-grid"></div>
+  </div>
+</div>
+
+<!-- Modal popup shown when a recipe tile is clicked ("explore" view) -->
+<div class="modal-overlay" id="modalOverlay" style="display:none;">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<script src="recipes-data.js"></script>
+<script src="recipe.js"></script>
+</body>
+</html>
